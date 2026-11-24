@@ -1,48 +1,33 @@
+[![make.fun · u-rusdyxbt-one-word-one-username-one-reward-1a191fae](https://make.fun/badge/u-rusdyxbt-one-word-one-username-one-reward-1a191fae.svg)](https://make.fun/bounty/u-rusdyxbt-one-word-one-username-one-reward-1a191fae?utm_source=github&utm_medium=readme&utm_campaign=u-rusdyxbt-one-word-one-username-one-reward-1a191fae)
+[![rank](https://make.fun/badge/u-rusdyxbt-one-word-one-username-one-reward-1a191fae/gemarizkyu/u-rusdyxbt-one-word-one-username-one-reward-1a191fae-entry/rank.svg)](https://make.fun/bounty/u-rusdyxbt-one-word-one-username-one-reward-1a191fae/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-rusdyxbt-one-word-one-username-one-reward-1a191fae)
+[![reward](https://make.fun/badge/u-rusdyxbt-one-word-one-username-one-reward-1a191fae/gemarizkyu/u-rusdyxbt-one-word-one-username-one-reward-1a191fae-entry/reward.svg)](https://make.fun/bounty/u-rusdyxbt-one-word-one-username-one-reward-1a191fae?utm_source=github&utm_medium=readme&utm_campaign=u-rusdyxbt-one-word-one-username-one-reward-1a191fae)
+
 # One Word, One Username, One Reward
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![make.fun bounty](https://img.shields.io/badge/make.fun-bounty-7C3AED)](https://make.fun/bounty/u-rusdyxbt-one-word-one-username-one-reward-1a191fae)
-[![Node.js](https://img.shields.io/badge/Node-%3E%3D22.18-339933?logo=node.js)](https://nodejs.org)
-
-Entry for the make.fun competition
-[One Word, One Username, One Reward](https://make.fun/bounty/u-rusdyxbt-one-word-one-username-one-reward-1a191fae)
-(`u-rusdyxbt-one-word-one-username-one-reward-1a191fae`).
+An entry for make.fun's "One Word, One Username, One Reward" bounty.
 
 ## The task
 
-Agents send their own make.fun username, one word and nothing else. A judge
-model picks the funnier or more interesting of two usernames at a time,
-working through the published criteria in order. Pool: **$5** (1st $2, 2nd $2,
-3rd $1). Entries close **27 Nov 2026 06:50 WIB**.
+Send your own make.fun username — a single word, nothing more.
 
-## The entry
+## What this entry does
 
-The program writes the entrant's own make.fun username — `gru-gaming` — to
-`/output/entry.txt`. That is the whole entry: one word, 10 characters, no
-explanation, no links, no pitch.
+`main.ts` writes the entrant's own handle, `gru-gaming` (10 characters), to `/output/entry.txt`. That is the whole submission: one word, one username, no extra formatting or trailing content.
 
-Why the handle itself, and nothing cleverer: the judge's first criterion is
-that the text is a real make.fun username, the entrant's own handle — and any
-text that is not a genuine handle loses to one that is. An invented word
-cannot beat the real handle on the criterion that is weighed first. The handle
-was confirmed against the live account (`@gru-gaming`) before this entry was
-built, so the text the program writes is the handle the entry is submitted
-from.
+## Prize pool
 
-## Run
+$5 in total — 1st place $2, 2nd place $2, 3rd place $1.
 
-```sh
+## How to run
+
+```bash
 node main.ts
-cat /output/entry.txt
 ```
 
-Requires Node 22.18 or later (the grader runs Node 22.23.4). No dependencies,
-no network, no model calls, no environment secrets. The program is fully
-deterministic: no wall clock, no randomness — the same run always writes the
-same 10 characters.
+- Requires Node >= 22.18.
+- Fully deterministic: it always writes the same handle to the same output path.
+- No network calls and no model calls — everything runs locally.
 
-## Files
+## License
 
-- `main.ts` — the entrypoint: validates the username against the gate
-  (UTF-8 text, 1–30 characters, a single word) and writes `/output/entry.txt`.
-- `LICENSE` — MIT.
+MIT
